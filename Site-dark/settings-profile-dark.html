@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="dark">
+<body id="dark" onload="today($)">
   <header class="dark-bb">
     <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="exchange-dark.html"><img src="assets/img/logo-light.png" alt="logo"></a>
@@ -24,6 +24,9 @@
 
       <div class="collapse navbar-collapse" id="headerMenu">
         <ul class="navbar-nav mr-auto">
+          <li style="margin-top: auto;"><i class="icon ion-md-timer" style="color: white; margin-right: 3px;"></i><span id="today" style="color: white;"></span></li>
+        </ul>
+        <!-- <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
@@ -76,7 +79,7 @@
               <a class="dropdown-item" href="404-dark.html">404</a>
             </div>
           </li>
-        </ul>
+        </ul> -->
         <ul class="navbar-nav ml-auto">
           <li class="nav-item header-custom-icon">
             <a class="nav-link" href="#" id="clickFullscreen">
@@ -1290,7 +1293,20 @@
       </div>
     </div>
   </div>
-
+  <script>
+    function today($) {
+    /*-------------------------- 
+        Current Date
+    ---------------------------*/
+    if($("#today").length) {
+        var date= new Date();
+        var day = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+        var month = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+        var datevalue = day[date.getDay()]+', '+month[date.getMonth()]+' '+date.getDate()+', '+date.getFullYear();
+        $('#today').html(datevalue);
+    }
+  }
+  </script>
   <script src="assets/js/jquery-3.4.1.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
@@ -1299,6 +1315,4 @@
   <script src="assets/js/custom.js"></script>
 </body>
 
-
-<!-- Mirrored from crypo.netlify.app/settings-profile-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Jun 2021 23:19:43 GMT -->
 </html>
