@@ -1,6 +1,5 @@
 <?php
 
-
 include ("config.php");
 
 if(!isset($_POST["email"]) || empty($_POST['email'])){
@@ -29,5 +28,4 @@ Envio do email
 
 echo json_encode(["status"=>"success","message"=>"E-mail enviado, por favor verifique sua caixa de entrada!"]);
 return;
-
 ?>
