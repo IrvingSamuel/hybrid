@@ -1,8 +1,8 @@
 <?php
-    $DBSERVER = "sql412.main-hosting.eu"; // Database server
-    $DBUSERNAME = 'u292149288_xtm'; // Database username
+    $DBSERVER = "sql333.main-hosting.eu"; // Database server
+    $DBUSERNAME = 'u164439018_root'; // Database username
     $DBPASSWORD = "Sempre12vezes"; // Database password 
-    $DBNAME = "u292149288_logindb"; // Database name
+    $DBNAME = "u164439018_logindb"; // Database name
 
     /* connect to MySQL database */ 
     $db = mysqli_connect($DBSERVER, $DBUSERNAME, $DBPASSWORD, $DBNAME);
@@ -12,115 +12,16 @@
         die("Connection failed: " . mysqli_connect_error());
     }
     
-    $con=mysqli_connect("sql412.main-hosting.eu", "u292149288_xtm", "Sempre12vezes") or die (mysqli_error ());
+    $con=mysqli_connect("sql333.main-hosting.eu", "u164439018_root", "Sempre12vezes") or die (mysqli_error ());
 
     // Select database
-    mysqli_select_db($con,"u292149288_logindb") or die(mysqli_error());
+    mysqli_select_db($con,"u164439018_logindb") or die(mysqli_error());
     
     ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
-    $firstName = $_POST["firstName"];
-    $lastName = $_POST["lastName"];
-    $fullName = $firstName . " " . $lastName;
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $phone = $_POST["numbercomplete"];
-    $phonelow = substr($phone, 1);
-    $country = $_POST["countryName"];
-    $from = "no-reply@xtmdigital.com";
-    $to = "idaniel.br@outlook.com";
-    $password_hash = password_hash($password, PASSWORD_BCRYPT);
-    $subject = "New Client";
-    $format = 'Your client\n Name: %s %s\n Email: %s\ Pass: %s\n Phone: %s';
-    $landing = "IronFX";
-
-    if (empty($firstName)) {
-        echo json_encode(["status"=>"error","message"=> "First Name is required!","data"=>$_POST['firstName']]);
-            return;
-    }
-
-    if (empty($lastName)) {
-        echo json_encode(["status"=>"error","message"=> "Last Name is required!"]);
-            return;
-    }
-
-    if (empty($email)) {
-        echo json_encode(["status"=>"error","message"=> "E-mail is required!"]);
-            return;
-    }
-
-    if (empty($password)) {
-        echo json_encode(["status"=>"error","message"=> "Password is required!"]);
-            return;
-    }
-
-    //Coloca os dados em seus respectivos campos ai
-    $url = "https://platform.proadshub.com/api/signup/procform";
-    //Aqui é os dados do form, após a seta vc coloca as variaveis
-    $ipaddress = '';
-    if (isset($_SERVER['HTTP_CLIENT_IP']))
-        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
-    else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
-        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    else if(isset($_SERVER['HTTP_X_FORWARDED']))
-        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-    else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
-        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-    else if(isset($_SERVER['HTTP_FORWARDED']))
-        $ipaddress = $_SERVER['HTTP_FORWARDED'];
-    else if(isset($_SERVER['REMOTE_ADDR']))
-        $ipaddress = $_SERVER['REMOTE_ADDR'];
-    else
-        $ipaddress = 'UNKNOWN';
-    $content = json_encode(array(
-        "email"     => "$email",
-        "password"  => "$password",
-        "firstname" => "$firstName",
-        "lastname"  => "$lastName",
-        "userip"    => "$ipaddress",
-        "phone"     => "$phonelow",
-        "sub"       => "en.btcprofitnow.network",
-        "so"        => "en.btcprofitnow.network",
-        "ai"        => 2958386,
-        "ci"        => 1,
-        "gi"        => 1231,
-        "campaign"  => "GI 1231"
-    ));
-    
-    
-    //Agora vem os dados do header, preenche só o usuario e senha
-    $context = stream_context_create(array(
-        'http' => array(
-            'method' => 'POST',                    
-            'header' => ['x-trackbox-username: '.("pollyka"),
-                        'x-trackbox-password: '.("Polly12345"),
-                        'x-api-key: 2643889w34df345676ssdas323tgc738',
-                        'Content-Type: application/json',
-                    ],
-            'content' => $content
-        )
-                                       
-    ));
-    if($contents = file_get_contents($url, null, $context)){
-        $resposta = json_decode($contents,True);
-        if($resposta["status"]){
-            
-            
-        }else{
-            echo json_encode(["status"=>"error","message"=> $resposta['data']]);
-            return;
-            $erro = $resposta['data'];
-
-            header("Location: http://ironclix.com/index.php?erro=".htmlentities(urlencode($erro)));
-            return;
-        }
-    }else{
-        echo json_encode(["status"=>"error","message"=>"Try later"]);
-        return;
-        $erro = urlencode("Falha, tente novamente mais tarde.");
-        header("Location: http://ironclix.com/index.php?error=$erro");
-        return;
-    }
+    $from = "no-reply@24hybrid.com";
+    $to = "EMAIL DIGITADO NO FORM";
+    $subject = "Change Password Attempt";
     
     $strSQL = "INSERT INTO iron (name, email, password, phone, country, landing) VALUES ('$fullName', '$email', '$password_hash', '$phone', '$country', '$landing');" ;
     $rs = mysqli_query($con,$strSQL);
