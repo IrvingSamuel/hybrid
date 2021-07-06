@@ -11,7 +11,7 @@ if(!isset($_POST["email"]) || empty($_POST['email'])){
 $user = mysqli_fetch_assoc(mysqli_query($con,"SELECT *, COUNT(*) as qtd FROM user WHERE email = '$email'"));
 
 if($user['qtd'] == 0){
-	echo json_encode(["status"=>"error","message"=>"E-mail não encontrado'!"]);
+	echo json_encode(["status"=>"error","message"=>"E-mail não encontrado!"]);
 	return;
 }
 

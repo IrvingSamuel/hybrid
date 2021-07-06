@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$DB = "logindb";
+$DB = "hybrid";
 $port = "3306";
 
 $con = new mysqli($host, $user, $password, $DB, $port);
