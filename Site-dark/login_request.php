@@ -9,7 +9,7 @@ if(!isset($_POST["email"])){
 }
 
 if(!isset($_POST["password"])){
-	echo json_encode(["status"=>"error","message"=>"Password não pode ser vazio!"]);]
+	echo json_encode(["status"=>"error","message"=>"Password não pode ser vazio!"]);
 	return;
 }
 
@@ -29,11 +29,14 @@ if($user['password'] != $password){
 	return;
 }
 
-$token = $password.$email.time();
+$token = md5($password."".$email."".time());
 
 mysqli_query($con,"UPDATE user SET token_login = '$token'");
 session_start();
 
 $_SESSION['token_hybrid'] = $token;
+
+echo json_encode(["status"=>"success","message"=>"Login realizado com sucesso!"]);
+return;
 
 ?>
