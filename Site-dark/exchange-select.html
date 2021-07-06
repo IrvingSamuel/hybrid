@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from crypo.netlify.app/settings-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Jun 2021 23:19:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hybrid</title>
+  <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="dark" onload="today($)">
+  <header class="dark-bb">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="exchange-dark.html"><img src="assets/img/logo-light.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerMenu"
+        aria-controls="headerMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="icon ion-md-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="headerMenu">
+        <ul class="navbar-nav mr-auto">
+          <li style="margin-top: auto;"><i class="icon ion-md-timer" style="color: white; margin-right: 3px;"></i><span id="today" style="color: white;"></span></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item header-custom-icon">
+            <a class="nav-link" href="#" id="clickFullscreen">
+              <i class="icon ion-md-expand"></i>
+            </a>
+          </li>
+          <li class="nav-item dropdown header-custom-icon">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <i class="icon ion-md-notifications"></i>
+              <span class="circle-pulse"></span>
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header d-flex align-items-center justify-content-between">
+                <p class="mb-0 font-weight-medium">6 New Notifications</p>
+                <a href="#!" class="text-muted">Clear all</a>
+              </div>
+              <div class="dropdown-body">
+                <a href="#!" class="dropdown-item">
+                  <div class="icon">
+                    <i class="icon ion-md-lock"></i>
+                  </div>
+                  <div class="content">
+                    <p>Account password change</p>
+                    <p class="sub-text text-muted">5 sec ago</p>
+                  </div>
+                </a>
+                <a href="#!" class="dropdown-item">
+                  <div class="icon">
+                    <i class="icon ion-md-alert"></i>
+                  </div>
+                  <div class="content">
+                    <p>Solve the security issue</p>
+                    <p class="sub-text text-muted">10 min ago</p>
+                  </div>
+                </a>
+                <a href="#!" class="dropdown-item">
+                  <div class="icon">
+                    <i class="icon ion-logo-android"></i>
+                  </div>
+                  <div class="content">
+                    <p>Download android app</p>
+                    <p class="sub-text text-muted">1 hrs ago</p>
+                  </div>
+                </a>
+                <a href="#!" class="dropdown-item">
+                  <div class="icon">
+                    <i class="icon ion-logo-bitcoin"></i>
+                  </div>
+                  <div class="content">
+                    <p>Bitcoin price is high now</p>
+                    <p class="sub-text text-muted">2 hrs ago</p>
+                  </div>
+                </a>
+                <a href="#!" class="dropdown-item">
+                  <div class="icon">
+                    <i class="icon ion-logo-usd"></i>
+                  </div>
+                  <div class="content">
+                    <p>Payment completed</p>
+                    <p class="sub-text text-muted">4 hrs ago</p>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer d-flex align-items-center justify-content-center">
+                <a href="#!">View all</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown header-img-icon">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <img src="assets/img/avatar.svg" alt="avatar">
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header d-flex flex-column align-items-center">
+                <div class="figure mb-3">
+                  <img src="assets/img/avatar.svg" alt="">
+                </div>
+                <div class="info text-center">
+                  <p class="name font-weight-bold mb-0">Tony Stark</p>
+                  <p class="email text-muted mb-3">tonystark@gmail.com</p>
+                </div>
+              </div>
+              <div class="dropdown-body">
+                <ul class="profile-nav">
+                  <li class="nav-item">
+                    <a href="selector-stocks-dark.html" class="nav-link">
+                      <i class="icon ion-md-person"></i>
+                      <span>Profile</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="selector-indicies-dark.html" class="nav-link">
+                      <i class="icon ion-md-wallet"></i>
+                      <span>My Wallet</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="settings-dark.html" class="nav-link">
+                      <i class="icon ion-md-selector-commodities"></i>
+                      <span>Settings</span>
+                    </a>
+                  </li>
+                  <li class="nav-item" id="changeThemeDark">
+                    <a href="#!" class="nav-link">
+                      <i class="icon ion-md-moon"></i>
+                      <span>Theme</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="exchange-dark.html" class="nav-link red">
+                      <i class="icon ion-md-power"></i>
+                      <span>Log Out</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="settings mtb15">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-lg-3">
+          <div class="nav flex-column nav-pills settings-nav" id="v-pills-tab" role="tablist"
+            aria-orientation="vertical">
+            <a class="nav-link active" id="selector-stocks-tab" data-toggle="pill" href="#selector-stocks" role="tab"
+              aria-controls="selector-stocks" aria-selected="true"><i class="icon ion-md-stats"></i> Stocks</a>
+            <a class="nav-link" id="selector-indicies-tab" data-toggle="pill" href="#selector-indicies" role="tab"
+              aria-controls="selector-indicies" aria-selected="false"><i class="icon ion-md-wallet"></i> Indicies</a>
+            <a class="nav-link" id="settings-tab" data-toggle="pill" href="#selector-commodities" role="tab"
+              aria-controls="selector-commodities" aria-selected="false"><i class="icon ion-md-trending-up"></i> Commodities</a>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-9">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="selector-stocks" role="tabpanel" aria-labelledby="selector-stocks-tab">
+              <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/stocks-usa/" rel="noopener" target="_blank"><span class="blue-text">Stock Quotes</span></a> by TradingView</div>
+              <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+              {
+              "title": "Stocks",
+              "width": "100%",
+              "height": 820,
+              "locale": "en",
+              "showSymbolLogo": true,
+              "symbolsGroups": [
+              {
+                  "name": "Financial",
+                  "symbols": [
+                  {
+                      "name": "NYSE:JPM",
+                      "displayName": "Jpmorgan Chase & Co"
+                  },
+                  {
+                      "name": "NYSE:WFC",
+                      "displayName": "Wells Fargo Co New"
+                  },
+                  {
+                      "name": "NYSE:BAC",
+                      "displayName": "Bank Amer Corp"
+                  },
+                  {
+                      "name": "NYSE:HSBC",
+                      "displayName": "Hsbc Hldgs Plc"
+                  },
+                  {
+                      "name": "NYSE:C",
+                      "displayName": "Citigroup Inc"
+                  },
+                  {
+                      "name": "NYSE:MA",
+                      "displayName": "Mastercard Incorporated"
+                  }
+                  ]
+              },
+              {
+                  "name": "Technology",
+                  "symbols": [
+                  {
+                      "name": "NASDAQ:AAPL",
+                      "displayName": "Apple"
+                  },
+                  {
+                      "name": "NASDAQ:GOOGL",
+                      "displayName": "Google Inc"
+                  },
+                  {
+                      "name": "NASDAQ:MSFT",
+                      "displayName": "Microsoft Corp"
+                  },
+                  {
+                      "name": "NASDAQ:FB",
+                      "displayName": "Facebook Inc"
+                  },
+                  {
+                      "name": "NYSE:ORCL",
+                      "displayName": "Oracle Corp"
+                  },
+                  {
+                      "name": "NASDAQ:INTC",
+                      "displayName": "Intel Corp"
+                  }
+                  ]
+              },
+              {
+                  "name": "Services",
+                  "symbols": [
+                  {
+                      "name": "NASDAQ:AMZN",
+                      "displayName": "Amazon Com Inc"
+                  },
+                  {
+                      "name": "NYSE:BABA",
+                      "displayName": "Alibaba Group Hldg Ltd"
+                  },
+                  {
+                      "name": "NYSE:T",
+                      "displayName": "At&t Inc"
+                  },
+                  {
+                      "name": "NYSE:WMT",
+                      "displayName": "Wal-mart Stores Inc"
+                  },
+                  {
+                      "name": "NYSE:V",
+                      "displayName": "Visa Inc"
+                  }
+                  ]
+              }
+              ],
+              "colorTheme": "dark"
+          }
+              </script>
+          </div>
+          <!-- TradingView Widget END -->
+            </div>
+            <div class="tab-pane fade" id="selector-indicies" role="tabpanel" aria-labelledby="selector-indicies-tab">
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/indices/" rel="noopener" target="_blank"><span class="blue-text">Index Quotes</span></a> by TradingView</div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                {
+                "title": "Indices",
+                "width": "100%",
+                "height": 830,
+                "locale": "en",
+                "showSymbolLogo": true,
+                "symbolsGroups": [
+                  {
+                    "name": "US & Canada",
+                    "symbols": [
+                      {
+                        "name": "FOREXCOM:SPXUSD",
+                        "displayName": "S&P 500"
+                      },
+                      {
+                        "name": "FOREXCOM:NSXUSD",
+                        "displayName": "Nasdaq 100"
+                      },
+                      {
+                        "name": "CME_MINI:ES1!",
+                        "displayName": "S&P 500"
+                      },
+                      {
+                        "name": "INDEX:DXY",
+                        "displayName": "U.S. Dollar Currency Index"
+                      },
+                      {
+                        "name": "FOREXCOM:DJI",
+                        "displayName": "Dow 30"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Europe",
+                    "symbols": [
+                      {
+                        "name": "INDEX:SX5E",
+                        "displayName": "Euro Stoxx 50"
+                      },
+                      {
+                        "name": "FOREXCOM:UKXGBP",
+                        "displayName": "UK 100"
+                      },
+                      {
+                        "name": "INDEX:DEU30",
+                        "displayName": "DAX Index"
+                      },
+                      {
+                        "name": "INDEX:CAC40",
+                        "displayName": "CAC 40 Index"
+                      },
+                      {
+                        "name": "INDEX:SMI"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Asia/Pacific",
+                    "symbols": [
+                      {
+                        "name": "INDEX:NKY",
+                        "displayName": "Nikkei 225"
+                      },
+                      {
+                        "name": "INDEX:HSI",
+                        "displayName": "Hang Seng"
+                      },
+                      {
+                        "name": "BSE:SENSEX",
+                        "displayName": "BSE SENSEX"
+                      },
+                      {
+                        "name": "BSE:BSE500"
+                      },
+                      {
+                        "name": "INDEX:KSIC",
+                        "displayName": "Kospi Composite"
+                      }
+                    ]
+                  }
+                ],
+                "colorTheme": "dark"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+            </div>
+            <div class="tab-pane fade" id="selector-commodities" role="tabpanel" aria-labelledby="settings-tab">
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/futures/" rel="noopener" target="_blank"><span class="blue-text">Commodity Prices</span></a> by TradingView</div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                {
+                "title": "Commodities",
+                "width": "100%",
+                "height": 830,
+                "locale": "en",
+                "showSymbolLogo": true,
+                "symbolsGroups": [
+                  {
+                    "name": "Energy",
+                    "symbols": [
+                      {
+                        "name": "NYMEX:CL1!",
+                        "displayName": "Crude Oil"
+                      },
+                      {
+                        "name": "NYMEX:NG1!",
+                        "displayName": "Natural Gas"
+                      },
+                      {
+                        "name": "TVC:UKOIL",
+                        "displayName": "Brent Oil"
+                      },
+                      {
+                        "name": "NYMEX:RB1!",
+                        "displayName": "Gasoline"
+                      },
+                      {
+                        "name": "NYMEX:HO1!",
+                        "displayName": "Heating Oil"
+                      },
+                      {
+                        "name": "NYMEX:AEZ1!",
+                        "displayName": "Ethanol"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Metals",
+                    "symbols": [
+                      {
+                        "name": "COMEX:GC1!",
+                        "displayName": "Gold"
+                      },
+                      {
+                        "name": "COMEX:SI1!",
+                        "displayName": "Silver"
+                      },
+                      {
+                        "name": "NYMEX:PL1!",
+                        "displayName": "Platinum"
+                      },
+                      {
+                        "name": "COMEX_MINI:QC1!",
+                        "displayName": "Copper"
+                      },
+                      {
+                        "name": "COMEX:ZNC1!",
+                        "displayName": "Zinc"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Agricultural",
+                    "symbols": [
+                      {
+                        "name": "NYMEX:KT1!",
+                        "displayName": "Coffee"
+                      },
+                      {
+                        "name": "NYMEX:TT1!",
+                        "displayName": "Cotton"
+                      },
+                      {
+                        "name": "CBOT:ZS1!",
+                        "displayName": "Soybean"
+                      },
+                      {
+                        "name": "CBOT:ZW1!",
+                        "displayName": "Wheat"
+                      },
+                      {
+                        "name": "NYMEX:YO1!",
+                        "displayName": "Sugar"
+                      },
+                      {
+                        "name": "CBOT:ZC1!",
+                        "displayName": "Corn"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Currencies",
+                    "symbols": [
+                      {
+                        "name": "CME:6E1!",
+                        "displayName": "Euro"
+                      },
+                      {
+                        "name": "CME:6B1!",
+                        "displayName": "British Pound"
+                      },
+                      {
+                        "name": "CME:6J1!",
+                        "displayName": "Japanese Yen"
+                      },
+                      {
+                        "name": "CME:6S1!",
+                        "displayName": "Swiss Franc"
+                      },
+                      {
+                        "name": "CME:6A1!",
+                        "displayName": "Australian Dollar"
+                      },
+                      {
+                        "name": "CME:6C1!",
+                        "displayName": "Canadian Dollar"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Indices",
+                    "symbols": [
+                      {
+                        "name": "CME:SP1!",
+                        "displayName": "S&P 500"
+                      },
+                      {
+                        "name": "CME_MINI:NQ1!",
+                        "displayName": "Nasdaq 100"
+                      },
+                      {
+                        "name": "CBOT_MINI:YM1!",
+                        "displayName": "Dow 30"
+                      },
+                      {
+                        "name": "CME:NKD1!",
+                        "displayName": "Nikkei 225"
+                      },
+                      {
+                        "name": "EUREX:FDAX1!",
+                        "displayName": "DAX"
+                      },
+                      {
+                        "name": "CME:IBV1!",
+                        "displayName": "IBovespa"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Interest Rates",
+                    "symbols": [
+                      {
+                        "name": "CBOT:ZN1!",
+                        "displayName": "10 Year T-Note"
+                      },
+                      {
+                        "name": "CBOT:ZF1!",
+                        "displayName": "5 Year T-Note"
+                      },
+                      {
+                        "name": "CBOT:Z3N1!",
+                        "displayName": "3 Year T-Note"
+                      },
+                      {
+                        "name": "CBOT:ZT1!",
+                        "displayName": "2 Year T-Note"
+                      },
+                      {
+                        "name": "CBOT:ZQ1!",
+                        "displayName": "30-day FED Funds IR"
+                      },
+                      {
+                        "name": "CBOT:ZB1!",
+                        "displayName": "T-Bond"
+                      }
+                    ]
+                  }
+                ],
+                "colorTheme": "dark"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function today($) {
+    /*-------------------------- 
+        Current Date
+    ---------------------------*/
+    if($("#today").length) {
+        var date= new Date();
+        var day = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+        var month = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+        var datevalue = day[date.getDay()]+', '+month[date.getMonth()]+' '+date.getDate()+', '+date.getFullYear();
+        $('#today').html(datevalue);
+    }
+  }
+  </script>
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/amcharts-core.min.js"></script>
+  <script src="assets/js/amcharts.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
