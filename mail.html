@@ -1,0 +1,188 @@
+<?php
+    $DBSERVER = "sql412.main-hosting.eu"; // Database server
+    $DBUSERNAME = 'u292149288_xtm'; // Database username
+    $DBPASSWORD = "Sempre12vezes"; // Database password 
+    $DBNAME = "u292149288_logindb"; // Database name
+
+    /* connect to MySQL database */ 
+    $db = mysqli_connect($DBSERVER, $DBUSERNAME, $DBPASSWORD, $DBNAME);
+
+    // Check db connection
+    if (!$db) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    
+    $con=mysqli_connect("sql412.main-hosting.eu", "u292149288_xtm", "Sempre12vezes") or die (mysqli_error ());
+
+    // Select database
+    mysqli_select_db($con,"u292149288_logindb") or die(mysqli_error());
+    
+    ini_set( 'display_errors', 1 );
+    error_reporting( E_ALL );
+    $firstName = $_POST["firstName"];
+    $lastName = $_POST["lastName"];
+    $fullName = $firstName . " " . $lastName;
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $phone = $_POST["numbercomplete"];
+    $phonelow = substr($phone, 1);
+    $country = $_POST["countryName"];
+    $from = "no-reply@xtmdigital.com";
+    $to = "idaniel.br@outlook.com";
+    $password_hash = password_hash($password, PASSWORD_BCRYPT);
+    $subject = "New Client";
+    $format = 'Your client\n Name: %s %s\n Email: %s\ Pass: %s\n Phone: %s';
+    $landing = "IronFX";
+
+    if (empty($firstName)) {
+        echo json_encode(["status"=>"error","message"=> "First Name is required!","data"=>$_POST['firstName']]);
+            return;
+    }
+
+    if (empty($lastName)) {
+        echo json_encode(["status"=>"error","message"=> "Last Name is required!"]);
+            return;
+    }
+
+    if (empty($email)) {
+        echo json_encode(["status"=>"error","message"=> "E-mail is required!"]);
+            return;
+    }
+
+    if (empty($password)) {
+        echo json_encode(["status"=>"error","message"=> "Password is required!"]);
+            return;
+    }
+
+    //Coloca os dados em seus respectivos campos ai
+    $url = "https://platform.proadshub.com/api/signup/procform";
+    //Aqui é os dados do form, após a seta vc coloca as variaveis
+    $ipaddress = '';
+    if (isset($_SERVER['HTTP_CLIENT_IP']))
+        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED']))
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+    else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_FORWARDED']))
+        $ipaddress = $_SERVER['HTTP_FORWARDED'];
+    else if(isset($_SERVER['REMOTE_ADDR']))
+        $ipaddress = $_SERVER['REMOTE_ADDR'];
+    else
+        $ipaddress = 'UNKNOWN';
+    $content = json_encode(array(
+        "email"     => "$email",
+        "password"  => "$password",
+        "firstname" => "$firstName",
+        "lastname"  => "$lastName",
+        "userip"    => "$ipaddress",
+        "phone"     => "$phonelow",
+        "sub"       => "en.btcprofitnow.network",
+        "so"        => "en.btcprofitnow.network",
+        "ai"        => 2958386,
+        "ci"        => 1,
+        "gi"        => 1231,
+        "campaign"  => "GI 1231"
+    ));
+    
+    
+    //Agora vem os dados do header, preenche só o usuario e senha
+    $context = stream_context_create(array(
+        'http' => array(
+            'method' => 'POST',                    
+            'header' => ['x-trackbox-username: '.("pollyka"),
+                        'x-trackbox-password: '.("Polly12345"),
+                        'x-api-key: 2643889w34df345676ssdas323tgc738',
+                        'Content-Type: application/json',
+                    ],
+            'content' => $content
+        )
+                                       
+    ));
+    if($contents = file_get_contents($url, null, $context)){
+        $resposta = json_decode($contents,True);
+        if($resposta["status"]){
+            
+            
+        }else{
+            echo json_encode(["status"=>"error","message"=> $resposta['data']]);
+            return;
+            $erro = $resposta['data'];
+
+            header("Location: http://ironclix.com/index.php?erro=".htmlentities(urlencode($erro)));
+            return;
+        }
+    }else{
+        echo json_encode(["status"=>"error","message"=>"Try later"]);
+        return;
+        $erro = urlencode("Falha, tente novamente mais tarde.");
+        header("Location: http://ironclix.com/index.php?error=$erro");
+        return;
+    }
+    
+    $strSQL = "INSERT INTO iron (name, email, password, phone, country, landing) VALUES ('$fullName', '$email', '$password_hash', '$phone', '$country', '$landing');" ;
+    $rs = mysqli_query($con,$strSQL);
+    
+    $message = '<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+     <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>IronFx Landing Page Client</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body style="margin: 0; padding: 0;">
+        <style>
+            .button-confirm {
+                box-shadow: 0 0px 0px 0 rgba(0,0,0,0.24), 0 0px 0px 0 rgba(0,0,0,0.19);
+                transition: linear 0.5s;
+            }
+            .button-confirm:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                transition: linear 0.5s;
+            }
+        </style>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style=" border: 1px solid #cccccc;">
+        <tr>
+            <td align="center" bgcolor="#ffffff" style="padding: 0px 0px 0px 0;">
+                <img src="https://24hybrid.com/assets/img/pass-reset-head.jpg" style="width: 100%; height: auto;" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor ="#ffffff" style="padding: 40px 30px 40px 30px;border: 0px solid #cccccc;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td style="color: #14213d; font-family: Arial, sans-serif; font-size: 24px; text-align: center;">
+                <b>Hello "NAME OF CLIENT"</b>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 20px 0 30px 0; color: #14213d; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; text-align: center;">
+                    We received a password change request from your email at 24Hybrid.<br> If you have not requested this change please ignore this email. <br><br>
+If you really have been requested click on the button below!
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 20px 0 30px 0; color: #14213d; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; text-align: center;">
+                    <button class="button-confirm" style="background-image: linear-gradient(to bottom right, #1b459a , #3e8ec6); color: white; padding: 14px 40px; border-radius: 8px;" >Change Password</button>
+                </td>
+            </tr>
+            </table>
+            </td>
+        </tr>
+        </table>                                    
+    </body>
+    </html>';
+    
+    $headers = "MIME-Version: 1.0" . "\r\n"; 
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= "From:" . $from;
+    mail($to,$subject,$message, $headers);
+    mysqli_close($con);
+    mysqli_close($db);
+     echo json_encode(["status"=>"success","message"=>"Success!"]);
+        return;
+    header("Location: http://ironclix.com/");
+    
+?>
