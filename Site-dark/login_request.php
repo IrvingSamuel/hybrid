@@ -15,7 +15,7 @@ if(!isset($_POST["password"])){
 
 
 $email = mysqli_real_escape_string($con,$_POST['email']);
-$password = $_POST['email'];
+$password = $_POST['password'];
 
 $user = mysqli_fetch_assoc(mysqli_query($con,"SELECT *, COUNT(*) as qtd FROM user WHERE email = '$email'"));
 
@@ -31,7 +31,7 @@ if($user['password'] != $password){
 
 $token = md5($password."".$email."".time());
 
-mysqli_query($con,"UPDATE user SET token_login = '$token'");
+mysqli_query($con,"UPDATE user SET token_login = '$token' WHERE id = '".$user['id']."'");
 session_start();
 
 $_SESSION['token_hybrid'] = $token;
