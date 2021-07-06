@@ -20,23 +20,26 @@
       <form>
         <span>Create Account</span>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Full Name">
+          <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First Name">
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" placeholder="Email Address">
+          <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last Name">
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="email" id="email" name="email" class="form-control" placeholder="Email Address">
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Confirm Password">
+          <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <input type="password" id="cpassword" name="cpassword" class="form-control" placeholder="Confirm Password">
         </div>
         <div class="custom-control custom-checkbox">
           <input type="checkbox" class="custom-control-input" id="form-checkbox">
           <label class="custom-control-label" for="form-checkbox">I agree to the <a href="#!">Terms &
               Conditions</a></label>
         </div>
-        <button type="submit" class="btn btn-primary">Create Account</button>
+        <button type="button" onclick="createAccount()" class="btn btn-primary">Create Account</button>
       </form>
       <h2>Already have an account? <a href="signin-dark.html">Sign in here</a></h2>
     </div>
@@ -48,6 +51,37 @@
   <script src="assets/js/amcharts-core.min.js"></script>
   <script src="assets/js/amcharts.min.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script>
+    function enviarDados(){
+      let firstname = $("#firstname").val();
+      let lastname = $("#lastname").val();
+      let email = $("#email").val();
+      let password = $("#password").val();
+      let cpassword = $("#cpassword").val();
+
+      $.ajax({
+        url: "register_request.php",
+        type: "POST",
+        cache: false,
+        data:{
+          firstname : firstname,
+          lastname : lastname,
+          email : email,
+          password : password,
+          cpassword : cpassword
+        },
+        success: function(a){
+          let dados = JSON.parse(a);
+          if(dados['status']=="success"){
+            swal.fire("Sucesso!",dados['message'],"success");
+            location  = ("signin-dark.html");
+          }else{
+            swal.fire("Atenção!",dados['message'],"error");
+          }
+        }
+      });
+    }
+  </script>
 </body>
 
 

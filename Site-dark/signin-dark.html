@@ -61,7 +61,7 @@
         success: function(a){
           let dados = JSON.parse(a);
           if(dados['status']=="success"){
-            //swal.fire("Sucesso!",dados['message'],"success");
+            swal.fire("Sucesso!",dados['message'],"success");
             location  = ("exchange-dark.html");
           }else{
             swal.fire("Atenção!",dados['message'],"error");
