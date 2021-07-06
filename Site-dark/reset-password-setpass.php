@@ -18,7 +18,8 @@
       <form>
         <span>Reset Password</span>
         <div class="form-group">
-          <input type="email" class="form-control" placeholder="Type your new password">
+          <input type="hidden" name="token" value="<?php echo $_GET['token']; ?>">
+          <input type="password" name="password" class="form-control" placeholder="Type your new password">
         </div>
         <button type="submit" class="btn btn-primary">Change Password</button>
       </form>
