@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hybrid Investments</title>
+  <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <a id="return-to-top"></a>
+
+  <header class="light-bb">
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+        async>
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+
+    <nav class="navbar navbar-expand-lg bg-white" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="exchange-light.html"><img src="assets/img/logo-dark.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerMenu"
+              aria-controls="headerMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="icon ion-md-menu"></i>
+            </button>
+           
+            <div class="collapse navbar-collapse " id="headerMenu">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Exchange
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="exchange-light.html">Exchange</a>
+                    <a class="dropdown-item" href="exchange-light-live-price.html">Exchange Live Price</a>
+                    <a class="dropdown-item" href="exchange-light-ticker.html">Exchange Ticker</a>
+                    <a class="dropdown-item" href="exchange-light-fluid.html">Exchange Fluid</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Markets
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="markets-light.html">Markets</a>
+                    <a class="dropdown-item" href="market-capital-light.html">Markets Line</a>
+                    <a class="dropdown-item" href="market-capital-bar-light.html">Markets Bar</a>
+                    <a class="dropdown-item" href="market-overview-light.html">Market Overview</a>
+                    <a class="dropdown-item" href="market-screener-light.html">Market Screener</a>
+                    <a class="dropdown-item" href="market-crypto-light.html">Market Crypto</a>
+                  </div>
+                </li>
+      
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Dashboard
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="settings-profile-light.html">Profile</a>
+                    <a class="dropdown-item" href="settings-wallet-light.html">Wallet</a>
+                    <a class="dropdown-item" href="settings-light.html">Settings</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Others
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="technical-analysis-light.html">Technical Analysis</a>
+                    <a class="dropdown-item" href="cross-rates-light.html">Cross Rates</a>
+                    <a class="dropdown-item" href="symbol-info-light.html">Symbol Info</a>
+                    <a class="dropdown-item" href="heat-map-light.html">Heat Map</a>
+                    <a class="dropdown-item" href="signin-light.html">Sign in</a>
+                    <a class="dropdown-item" href="signup-light.html">Sign up</a>
+                    <a class="dropdown-item" href="404-light.html">404</a>
+                  </div>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item header-custom-icon">
+                  <a class="nav-link" href="#" id="clickFullscreen">
+                    <i class="icon ion-md-expand"></i>
+                  </a>
+                </li>
+                <li class="nav-item dropdown header-custom-icon">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <i class="icon ion-md-notifications"></i>
+                    <span class="circle-pulse"></span>
+                  </a>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-header d-flex align-items-center justify-content-between">
+                      <p class="mb-0 font-weight-medium">6 New Notifications</p>
+                      <a href="#!" class="text-muted">Clear all</a>
+                    </div>
+                    <div class="dropdown-body">
+                      <a href="#!" class="dropdown-item">
+                        <div class="icon">
+                          <i class="icon ion-md-lock"></i>
+                        </div>
+                        <div class="content">
+                          <p>Account password change</p>
+                          <p class="sub-text text-muted">5 sec ago</p>
+                        </div>
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        <div class="icon">
+                          <i class="icon ion-md-alert"></i>
+                        </div>
+                        <div class="content">
+                          <p>Solve the security issue</p>
+                          <p class="sub-text text-muted">10 min ago</p>
+                        </div>
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        <div class="icon">
+                          <i class="icon ion-logo-android"></i>
+                        </div>
+                        <div class="content">
+                          <p>Download android app</p>
+                          <p class="sub-text text-muted">1 hrs ago</p>
+                        </div>
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        <div class="icon">
+                          <i class="icon ion-logo-bitcoin"></i>
+                        </div>
+                        <div class="content">
+                          <p>Bitcoin price is high now</p>
+                          <p class="sub-text text-muted">2 hrs ago</p>
+                        </div>
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        <div class="icon">
+                          <i class="icon ion-logo-usd"></i>
+                        </div>
+                        <div class="content">
+                          <p>Payment completed</p>
+                          <p class="sub-text text-muted">4 hrs ago</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="dropdown-footer d-flex align-items-center justify-content-center">
+                      <a href="#!">View all</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown header-img-icon">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="assets/img/avatar.svg" alt="avatar">
+                  </a>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-header d-flex flex-column align-items-center">
+                      <div class="figure mb-3">
+                        <img src="assets/img/avatar.svg" alt="">
+                      </div>
+                      <div class="info text-center">
+                        <p class="name font-weight-bold mb-0">Tony Stark</p>
+                        <p class="email text-muted mb-3">tonystark@gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="dropdown-body">
+                      <ul class="profile-nav">
+                        <li class="nav-item">
+                          <a href="settings-profile-light.html" class="nav-link">
+                            <i class="icon ion-md-person"></i>
+                            <span>Profile</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="settings-wallet-light.html" class="nav-link">
+                            <i class="icon ion-md-wallet"></i>
+                            <span>My Wallet</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="settings-light.html" class="nav-link">
+                            <i class="icon ion-md-settings"></i>
+                            <span>Settings</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" id="changeThemeLight">
+                          <a href="#!" class="nav-link">
+                            <i class="icon ion-md-sunny"></i>
+                            <span>Theme</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="exchange-light.html" class="nav-link red">
+                            <i class="icon ion-md-power"></i>
+                            <span>Log Out</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+  </header>
+
+  <main>
+    <div class="container-fluid mtb15 no-fluid">
+      <div class="row">
+  
+          <!-- Swiper -->
+          <div class="swiper-container mySwiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#.html" target="_blank">
+                      <img src="./assets/img/carousel1.png" alt="" class="img-fluid">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" target="_blank">
+                      <img src="./assets/img/carousel2.png" alt="" class="img-fluid">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" target="_blank">
+                      <img src="./assets/img/carousel3.png" alt="" class="img-fluid">
+                    </a>
+                  </div>
+              </div>
+              <div class="swiper-pagination"></div>
+          </div>
+      </div>
+    </div>
+  
+    <div class="bg-info clearfix"></div>
+  
+    <div class="d-flex justify-content-center" style="padding-top: 30px;">
+      <h2>
+        Check live feeds of the exchange and the market.
+      </h2>
+    </div>
+    <div class="d-flex justify-content-center">
+      <p>Invest smartly. Stay up to date on trends regarding the most popular coins in the market.</p>
+    </div>
+  
+    <div class="markets ptb70">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="markets-container">
+              <div class="markets-content">
+                <h2>BTC Index</h2>
+                <p>7340.65</p>
+                <span class="green"> + 0.45%</span>
+              </div>
+              <div class="markets-chart">
+                <div id="marketsChartBtcLight"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="markets-container">
+              <div class="markets-content">
+                <h2>ETH Index</h2>
+                <p>146.58</p>
+                <span class="red"> - 5.09%</span>
+              </div>
+              <div class="markets-chart">
+                <div id="marketsChartEthLight"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="markets-container">
+              <div class="markets-content">
+                <h2>LTC Index</h2>
+                <p>44.49</p>
+                <span class="green"> + 2.14%</span>
+              </div>
+              <div class="markets-chart">
+                <div id="marketsChartLtcLight"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <a href="#">
+      <div class="d-flex justify-content-center" style="background-color: #FE0003;">
+        <img src="./assets/img/banner4.jpg" alt="" class="img-responsive">
+      </div>
+    </a>
+  
+    <div class="container-fluid mtb15">
+      <div class="row">
+        <!-- Market Pairs -->
+        <div class="col-md-6">
+          <div class="market-pairs">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm"><i class="icon ion-md-search"></i></span>
+              </div>
+              <input type="text" class="form-control" placeholder="Search" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <ul class="nav nav-pills" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#STAR" role="tab" aria-selected="true"><i
+                    class="icon ion-md-star"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#BTC" role="tab" aria-selected="true">BTC</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#ETH" role="tab" aria-selected="false">ETH</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#NEO" role="tab" aria-selected="false">NEO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#USDT" role="tab" aria-selected="false">USDT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#DAI" role="tab" aria-selected="false">DAI</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show" id="STAR" role="tabpanel">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Pairs</th>
+                      <th>Last Price</th>
+                      <th>Change</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ETH/BTC</td>
+                      <td>0.00020255</td>
+                      <td class="red">-2.58%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> KCS/BTC</td>
+                      <td>0.00013192</td>
+                      <td class="green">+5.6%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XRP/BTC</td>
+                      <td>0.00002996</td>
+                      <td class="red">-1.55%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> VET/BTC</td>
+                      <td>0.00000103</td>
+                      <td class="green">+1.8%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tab-pane fade show active" id="BTC" role="tabpanel">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Pairs</th>
+                      <th>Last Price</th>
+                      <th>Change</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ETH/BTC</td>
+                      <td>0.00020255</td>
+                      <td class="red">-2.58%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> KCS/BTC</td>
+                      <td>0.00013192</td>
+                      <td class="green">+5.6%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XRP/BTC</td>
+                      <td>0.00002996</td>
+                      <td class="red">-1.55%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> VET/BTC</td>
+                      <td>0.00000103</td>
+                      <td class="green">+1.8%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> EOS/BTC</td>
+                      <td>0.00000103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BTT/BTC</td>
+                      <td>0.00002303</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> LTC/BTC</td>
+                      <td>0.03520103</td>
+                      <td class="green">+1.5%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> TRX/BTC</td>
+                      <td>0.00330103</td>
+                      <td class="red">-3.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BSV/BTC</td>
+                      <td>0.00300103</td>
+                      <td class="green">+2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> COTI/BTC</td>
+                      <td>0.003500103</td>
+                      <td class="green">+2.85%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XYT/BTC</td>
+                      <td>0.00003103</td>
+                      <td class="green">+3.55%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BNB/BTC</td>
+                      <td>0.003500103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XMR/BTC</td>
+                      <td>0.003500103</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> TRY/BTC</td>
+                      <td>0.00000123</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ADA/BTC</td>
+                      <td>0.00050103</td>
+                      <td class="green">+5.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> NEO/BTC</td>
+                      <td>0.00340103</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XLM/BTC</td>
+                      <td>0.00035103</td>
+                      <td class="green">+5.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ENQ/BTC</td>
+                      <td>0.00354103</td>
+                      <td class="green">+2.02%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> AVA/BTC</td>
+                      <td>0.02535103</td>
+                      <td class="green">+3.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> AMB/BTC</td>
+                      <td>0.05335103</td>
+                      <td class="green">+1.0%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> MAP/BTC</td>
+                      <td>0.00234103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> GO/BTC</td>
+                      <td>0.00354103</td>
+                      <td class="red">-6.50%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> KICK/BTC</td>
+                      <td>0.02053103</td>
+                      <td class="red">-6.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> DBC/BTC</td>
+                      <td>0.02535103</td>
+                      <td class="green">+7.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> GGC/BTC</td>
+                      <td>0.00353103</td>
+                      <td class="red">-4.05%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tab-pane fade show" id="ETH" role="tabpanel">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Pairs</th>
+                      <th>Last Price</th>
+                      <th>Change</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BTC/ETH</td>
+                      <td>0.00020255</td>
+                      <td class="green">+1.58%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> KCS/ETH</td>
+                      <td>0.00013192</td>
+                      <td class="red">-0.6%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XRP/ETH</td>
+                      <td>0.00002996</td>
+                      <td class="red">-0.55%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> VET/ETH</td>
+                      <td>0.00000103</td>
+                      <td class="green">+1.8%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> EOS/ETH</td>
+                      <td>0.00000103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BTT/ETH</td>
+                      <td>0.00002303</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> LTC/ETH</td>
+                      <td>0.03520103</td>
+                      <td class="green">+1.5%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> TRX/ETH</td>
+                      <td>0.00330103</td>
+                      <td class="red">-3.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BSV/ETH</td>
+                      <td>0.00300103</td>
+                      <td class="green">+2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> COTI/ETH</td>
+                      <td>0.003500103</td>
+                      <td class="green">+2.85%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XYT/ETH</td>
+                      <td>0.00003103</td>
+                      <td class="green">+3.55%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BNB/ETH</td>
+                      <td>0.003500103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XMR/ETH</td>
+                      <td>0.003500103</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> TRY/ETH</td>
+                      <td>0.00000123</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ADA/ETH</td>
+                      <td>0.00050103</td>
+                      <td class="green">+5.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> NEO/ETH</td>
+                      <td>0.00340103</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XLM/ETH</td>
+                      <td>0.00035103</td>
+                      <td class="green">+5.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ENQ/ETH</td>
+                      <td>0.00354103</td>
+                      <td class="green">+2.02%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> AVA/ETH</td>
+                      <td>0.02535103</td>
+                      <td class="green">+3.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> AMB/ETH</td>
+                      <td>0.05335103</td>
+                      <td class="green">+1.0%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> MAP/ETH</td>
+                      <td>0.00234103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> GO/ETH</td>
+                      <td>0.00354103</td>
+                      <td class="red">-6.50%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> KICK/ETH</td>
+                      <td>0.02053103</td>
+                      <td class="red">-6.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> DBC/ETH</td>
+                      <td>0.02535103</td>
+                      <td class="green">+7.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> GGC/ETH</td>
+                      <td>0.00353103</td>
+                      <td class="red">-4.05%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tab-pane fade show" id="NEO" role="tabpanel">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Pairs</th>
+                      <th>Last Price</th>
+                      <th>Change</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ETH/NEO</td>
+                      <td>0.00350255</td>
+                      <td class="red">-6.58%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> KCS/NEO</td>
+                      <td>0.00013192</td>
+                      <td class="green">+0.6%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XRP/NEO</td>
+                      <td>0.00002996</td>
+                      <td class="red">-0.55%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> VET/NEO</td>
+                      <td>0.00000103</td>
+                      <td class="green">+1.8%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> EOS/NEO</td>
+                      <td>0.00000103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BTT/NEO</td>
+                      <td>0.00002303</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> LTC/NEO</td>
+                      <td>0.03520103</td>
+                      <td class="green">+1.5%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> TRX/NEO</td>
+                      <td>0.00330103</td>
+                      <td class="red">-3.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BSV/NEO</td>
+                      <td>0.00300103</td>
+                      <td class="green">+2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> COTI/NEO</td>
+                      <td>0.003500103</td>
+                      <td class="green">+2.85%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XYT/NEO</td>
+                      <td>0.00003103</td>
+                      <td class="green">+3.55%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BNB/NEO</td>
+                      <td>0.003500103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XMR/NEO</td>
+                      <td>0.003500103</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> TRY/NEO</td>
+                      <td>0.00000123</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ADA/NEO</td>
+                      <td>0.00050103</td>
+                      <td class="green">+5.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> NEO/NEO</td>
+                      <td>0.00340103</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XLM/NEO</td>
+                      <td>0.00035103</td>
+                      <td class="green">+5.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ENQ/NEO</td>
+                      <td>0.00354103</td>
+                      <td class="green">+2.02%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> AVA/NEO</td>
+                      <td>0.02535103</td>
+                      <td class="green">+3.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> AMB/NEO</td>
+                      <td>0.05335103</td>
+                      <td class="green">+1.0%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> MAP/NEO</td>
+                      <td>0.00234103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> GO/NEO</td>
+                      <td>0.00354103</td>
+                      <td class="red">-6.50%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> KICK/NEO</td>
+                      <td>0.02053103</td>
+                      <td class="red">-6.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> DBC/NEO</td>
+                      <td>0.02535103</td>
+                      <td class="green">+7.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> GGC/NEO</td>
+                      <td>0.00353103</td>
+                      <td class="red">-4.05%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tab-pane fade show" id="USDT" role="tabpanel">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Pairs</th>
+                      <th>Last Price</th>
+                      <th>Change</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ETH/USDT</td>
+                      <td>0.00350255</td>
+                      <td class="red">-2.58%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> KCS/USDT</td>
+                      <td>0.00013192</td>
+                      <td class="green">+6.6%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XRP/USDT</td>
+                      <td>0.00002996</td>
+                      <td class="red">-0.55%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> VET/USDT</td>
+                      <td>0.00000103</td>
+                      <td class="green">+1.8%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> EOS/USDT</td>
+                      <td>0.00000103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BTT/USDT</td>
+                      <td>0.00002303</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> LTC/USDT</td>
+                      <td>0.03520103</td>
+                      <td class="green">+1.5%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> TRX/USDT</td>
+                      <td>0.00330103</td>
+                      <td class="red">-3.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BSV/USDT</td>
+                      <td>0.00300103</td>
+                      <td class="green">+2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> COTI/USDT</td>
+                      <td>0.003500103</td>
+                      <td class="green">+2.85%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XYT/USDT</td>
+                      <td>0.00003103</td>
+                      <td class="green">+3.55%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BNB/USDT</td>
+                      <td>0.003500103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XMR/USDT</td>
+                      <td>0.003500103</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> TRY/USDT</td>
+                      <td>0.00000123</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ADA/USDT</td>
+                      <td>0.00050103</td>
+                      <td class="green">+5.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> USDT/USDT</td>
+                      <td>0.00340103</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XLM/USDT</td>
+                      <td>0.00035103</td>
+                      <td class="green">+5.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ENQ/USDT</td>
+                      <td>0.00354103</td>
+                      <td class="green">+2.02%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> AVA/USDT</td>
+                      <td>0.02535103</td>
+                      <td class="green">+3.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> AMB/USDT</td>
+                      <td>0.05335103</td>
+                      <td class="green">+1.0%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> MAP/USDT</td>
+                      <td>0.00234103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> GO/USDT</td>
+                      <td>0.00354103</td>
+                      <td class="red">-6.50%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> KICK/USDT</td>
+                      <td>0.02053103</td>
+                      <td class="red">-6.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> DBC/USDT</td>
+                      <td>0.02535103</td>
+                      <td class="green">+7.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> GGC/USDT</td>
+                      <td>0.00353103</td>
+                      <td class="red">-4.05%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tab-pane fade show" id="DAI" role="tabpanel">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Pairs</th>
+                      <th>Last Price</th>
+                      <th>Change</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ETH/DAI</td>
+                      <td>0.05320255</td>
+                      <td class="green">+6.58%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> KCS/DAI</td>
+                      <td>0.00013192</td>
+                      <td class="green">+0.6%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XRP/DAI</td>
+                      <td>0.00002996</td>
+                      <td class="red">-0.55%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> VET/DAI</td>
+                      <td>0.00000103</td>
+                      <td class="green">+1.8%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> EOS/DAI</td>
+                      <td>0.00000103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BTT/DAI</td>
+                      <td>0.00002303</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> LTC/DAI</td>
+                      <td>0.03520103</td>
+                      <td class="green">+1.5%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> TRX/DAI</td>
+                      <td>0.00330103</td>
+                      <td class="red">-3.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BSV/DAI</td>
+                      <td>0.00300103</td>
+                      <td class="green">+2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> COTI/DAI</td>
+                      <td>0.003500103</td>
+                      <td class="green">+2.85%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XYT/DAI</td>
+                      <td>0.00003103</td>
+                      <td class="green">+3.55%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> BNB/DAI</td>
+                      <td>0.003500103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XMR/DAI</td>
+                      <td>0.003500103</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> TRY/DAI</td>
+                      <td>0.00000123</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ADA/DAI</td>
+                      <td>0.00050103</td>
+                      <td class="green">+5.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> DAI/DAI</td>
+                      <td>0.00340103</td>
+                      <td class="red">-1.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> XLM/DAI</td>
+                      <td>0.00035103</td>
+                      <td class="green">+5.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> ENQ/DAI</td>
+                      <td>0.00354103</td>
+                      <td class="green">+2.02%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> AVA/DAI</td>
+                      <td>0.02535103</td>
+                      <td class="green">+3.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> AMB/DAI</td>
+                      <td>0.05335103</td>
+                      <td class="green">+1.0%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> MAP/DAI</td>
+                      <td>0.00234103</td>
+                      <td class="red">-2.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> GO/DAI</td>
+                      <td>0.00354103</td>
+                      <td class="red">-6.50%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> KICK/DAI</td>
+                      <td>0.02053103</td>
+                      <td class="red">-6.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> DBC/DAI</td>
+                      <td>0.02535103</td>
+                      <td class="green">+7.05%</td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon ion-md-star"></i> GGC/DAI</td>
+                      <td>0.00353103</td>
+                      <td class="red">-4.05%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 d-flex flex-column">
+          <!-- Sign Up -->
+          <div class="card d-flex p-2 d-flex align-items-start">
+            <div class="card-body">
+              <h5 class="card-title">If <strong>time = money</strong>, why waste time?</h5>
+              <p class="card-text">Sign up with Hybrid right now and start investing!</p>
+            </div>
+            <div class="card-body d-flex align-self-center">
+              <a href="signup-light.html" class="d-flex btn-lg btn-primary text-decoration-none">Sign up</a>
+            </div>
+          </div>
+          
+          <a href="#">
+            <div class="p-2 flex-grow-1" style="padding: 0px!important; padding-top: 1rem!important; padding-bottom: 1rem!important;">
+              <img src="./assets/img/banner1.png" alt="" class="img=fluid">
+            </div>
+          </a>
+          <!-- Market Trade -->
+          <div class="market-trade p-2 align-items-end">
+            <ul class="nav nav-pills" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#pills-trade-limit" role="tab"
+                  aria-selected="true">Limit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#pills-market" role="tab" aria-selected="false">Market</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#pills-stop-limit" role="tab" aria-selected="false">Stop
+                  Limit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#pills-stop-market" role="tab" aria-selected="false">Stop
+                  Market</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="pills-trade-limit" role="tabpanel">
+                <div class="d-flex justify-content-between">
+                  <div class="market-trade-buy">
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Price">
+                      <div class="input-group-append">
+                        <span class="input-group-text">BTC</span>
+                      </div>
+                    </div>
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Amount">
+                      <div class="input-group-append">
+                        <span class="input-group-text">ETH</span>
+                      </div>
+                    </div>
+                    <ul class="market-trade-list">
+                      <li><a href="#!">25%</a></li>
+                      <li><a href="#!">50%</a></li>
+                      <li><a href="#!">75%</a></li>
+                      <li><a href="#!">100%</a></li>
+                    </ul>
+                    <p>Available: <span>0 BTC = 0 USD</span></p>
+                    <p>Volume: <span>0 BTC = 0 USD</span></p>
+                    <p>Margin: <span>0 BTC = 0 USD</span></p>
+                    <p>Fee: <span>0 BTC = 0 USD</span></p>
+                    <button class="btn buy">Buy</button>
+                  </div>
+                  <div class="market-trade-sell">
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Price">
+                      <div class="input-group-append">
+                        <span class="input-group-text">BTC</span>
+                      </div>
+                    </div>
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Amount">
+                      <div class="input-group-append">
+                        <span class="input-group-text">ETH</span>
+                      </div>
+                    </div>
+                    <ul class="market-trade-list">
+                      <li><a href="#!">25%</a></li>
+                      <li><a href="#!">50%</a></li>
+                      <li><a href="#!">75%</a></li>
+                      <li><a href="#!">100%</a></li>
+                    </ul>
+                    <p>Available: <span>0 BTC = 0 USD</span></p>
+                    <p>Volume: <span>0 BTC = 0 USD</span></p>
+                    <p>Margin: <span>0 BTC = 0 USD</span></p>
+                    <p>Fee: <span>0 BTC = 0 USD</span></p>
+                    <button class="btn sell">Sell</button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-market" role="tabpanel">
+                <div class="d-flex justify-content-between">
+                  <div class="market-trade-buy">
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Price">
+                      <div class="input-group-append">
+                        <span class="input-group-text">BTC</span>
+                      </div>
+                    </div>
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Amount">
+                      <div class="input-group-append">
+                        <span class="input-group-text">ETH</span>
+                      </div>
+                    </div>
+                    <ul class="market-trade-list">
+                      <li><a href="#!">25%</a></li>
+                      <li><a href="#!">50%</a></li>
+                      <li><a href="#!">75%</a></li>
+                      <li><a href="#!">100%</a></li>
+                    </ul>
+                    <p>Available: <span>0 BTC = 0 USD</span></p>
+                    <p>Volume: <span>0 BTC = 0 USD</span></p>
+                    <p>Margin: <span>0 BTC = 0 USD</span></p>
+                    <p>Fee: <span>0 BTC = 0 USD</span></p>
+                    <button class="btn buy">Buy</button>
+                  </div>
+                  <div class="market-trade-sell">
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Price">
+                      <div class="input-group-append">
+                        <span class="input-group-text">BTC</span>
+                      </div>
+                    </div>
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Amount">
+                      <div class="input-group-append">
+                        <span class="input-group-text">ETH</span>
+                      </div>
+                    </div>
+                    <ul class="market-trade-list">
+                      <li><a href="#!">25%</a></li>
+                      <li><a href="#!">50%</a></li>
+                      <li><a href="#!">75%</a></li>
+                      <li><a href="#!">100%</a></li>
+                    </ul>
+                    <p>Available: <span>0 BTC = 0 USD</span></p>
+                    <p>Volume: <span>0 BTC = 0 USD</span></p>
+                    <p>Margin: <span>0 BTC = 0 USD</span></p>
+                    <p>Fee: <span>0 BTC = 0 USD</span></p>
+                    <button class="btn sell">Sell</button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-stop-limit" role="tabpanel">
+                <div class="d-flex justify-content-between">
+                  <div class="market-trade-buy">
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Price">
+                      <div class="input-group-append">
+                        <span class="input-group-text">BTC</span>
+                      </div>
+                    </div>
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Amount">
+                      <div class="input-group-append">
+                        <span class="input-group-text">ETH</span>
+                      </div>
+                    </div>
+                    <ul class="market-trade-list">
+                      <li><a href="#!">25%</a></li>
+                      <li><a href="#!">50%</a></li>
+                      <li><a href="#!">75%</a></li>
+                      <li><a href="#!">100%</a></li>
+                    </ul>
+                    <p>Available: <span>0 BTC = 0 USD</span></p>
+                    <p>Volume: <span>0 BTC = 0 USD</span></p>
+                    <p>Margin: <span>0 BTC = 0 USD</span></p>
+                    <p>Fee: <span>0 BTC = 0 USD</span></p>
+                    <button class="btn buy">Buy</button>
+                  </div>
+                  <div class="market-trade-sell">
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Price">
+                      <div class="input-group-append">
+                        <span class="input-group-text">BTC</span>
+                      </div>
+                    </div>
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Amount">
+                      <div class="input-group-append">
+                        <span class="input-group-text">ETH</span>
+                      </div>
+                    </div>
+                    <ul class="market-trade-list">
+                      <li><a href="#!">25%</a></li>
+                      <li><a href="#!">50%</a></li>
+                      <li><a href="#!">75%</a></li>
+                      <li><a href="#!">100%</a></li>
+                    </ul>
+                    <p>Available: <span>0 BTC = 0 USD</span></p>
+                    <p>Volume: <span>0 BTC = 0 USD</span></p>
+                    <p>Margin: <span>0 BTC = 0 USD</span></p>
+                    <p>Fee: <span>0 BTC = 0 USD</span></p>
+                    <button class="btn sell">Sell</button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-stop-market" role="tabpanel">
+                <div class="d-flex justify-content-between">
+                  <div class="market-trade-buy">
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Price">
+                      <div class="input-group-append">
+                        <span class="input-group-text">BTC</span>
+                      </div>
+                    </div>
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Amount">
+                      <div class="input-group-append">
+                        <span class="input-group-text">ETH</span>
+                      </div>
+                    </div>
+                    <ul class="market-trade-list">
+                      <li><a href="#!">25%</a></li>
+                      <li><a href="#!">50%</a></li>
+                      <li><a href="#!">75%</a></li>
+                      <li><a href="#!">100%</a></li>
+                    </ul>
+                    <p>Available: <span>0 BTC = 0 USD</span></p>
+                    <p>Volume: <span>0 BTC = 0 USD</span></p>
+                    <p>Margin: <span>0 BTC = 0 USD</span></p>
+                    <p>Fee: <span>0 BTC = 0 USD</span></p>
+                    <button class="btn buy">Buy</button>
+                  </div>
+                  <div class="market-trade-sell">
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Price">
+                      <div class="input-group-append">
+                        <span class="input-group-text">BTC</span>
+                      </div>
+                    </div>
+                    <div class="input-group">
+                      <input type="number" class="form-control" placeholder="Amount">
+                      <div class="input-group-append">
+                        <span class="input-group-text">ETH</span>
+                      </div>
+                    </div>
+                    <ul class="market-trade-list">
+                      <li><a href="#!">25%</a></li>
+                      <li><a href="#!">50%</a></li>
+                      <li><a href="#!">75%</a></li>
+                      <li><a href="#!">100%</a></li>
+                    </ul>
+                    <p>Available: <span>0 BTC = 0 USD</span></p>
+                    <p>Volume: <span>0 BTC = 0 USD</span></p>
+                    <p>Margin: <span>0 BTC = 0 USD</span></p>
+                    <p>Fee: <span>0 BTC = 0 USD</span></p>
+                    <button class="btn sell">Sell</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          <div>
+            <a href="exchange-light.html" target="_blank">
+              <img src="./assets/img/info.png" alt="" class="img-fluid">
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <a href="#">
+        <div class="d-flex justify-content-center" style="background-color: #162B3C;">
+          <img src="./assets/img/banner5.jpg" alt="" class="img-responsive">
+        </div>
+      </a>
+
+      <div class="container-fluid mtb15">
+        <div class="row">
+          <div class="col-md-8">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js"
+                async>
+                  {
+                    "width": "100%",
+                      "height": 900,
+                        "defaultColumn": "overview",
+                          "screener_type": "crypto_mkt",
+                            "displayCurrency": "BTC",
+                              "colorTheme": "light",
+                                "locale": "en"
+                  }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+          </div>
+  
+          <!-- Banner 2 -->
+          <div class="col-md-4 d-flex flex-column">
+            <a href="#">
+              <div class="d-flex p-2 d-flex align-items-start" style="padding: 0px!important;">
+                <img src="./assets/img/banner2.png" alt="" class="img-responsive">
+              </div>
+            </a>
+            <div class="p-2 flex-grow-1" style="background-color: black; max-width: 455px;">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container-fluid">
+        <div class="card d-flex" style="border: 0px;">
+          <h3 class="card-title text-primary text-center" style="padding-top: 100px; padding-bottom: 40px">
+            ABOUT US
+          </h3>
+          <h2 class="card-title text-center">
+            Hybrid Investments
+          </h2>
+          <div class="row" style="padding-bottom: 40px;">
+  
+            <div class="col-sm-4">
+              <div class="card" style="border: 0px;">
+                <div class="card-body text-center">
+                  <i class="fas fa-users fa-5x text-primary" style="padding: 0.5em"></i>
+                  <h5 class="card-title">Professionals</h5>
+                  <p class="card-text">Invest in global markets with outstanding trading conditions with the help of our professional analysts</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card" style="border: 0px;">
+                <div class="card-body text-center">
+                  <i class="fas fa-chart-line fa-5x text-primary" style="padding: 0.5em"></i>
+                  <h5 class="card-title">Professional Trading Tools</h5>
+                  <p class="card-text">Analyse the markets using free technical & fundamental tools</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card" style="border: 0px;">
+                <div class="card-body text-center">
+                  <i class="fab fa-btc fa-5x text-primary" style="padding: 0.5em"></i>
+                  <h5 class="card-title">Crypto-ready</h5>
+                  <p class="card-text">We support most of the cryptocoins in the market, giving you the opportunity to invest in the future</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="card-body d-flex justify-content-center">
+              <a href="signup-light.html" class="d-flex btn-lg btn-primary text-decoration-none">Sign up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-dark justify-content-center text-center">
+    <div class="container">
+      <div class="row footer-top">
+				<div class="col-lg-12">
+					<ul id="social-networks">
+            <li>
+						  <a target="_blank" href="#" class="text-decoration-none">
+							  <i class="fab fa-facebook-square fa-3x" id="social-network"></i>
+							</a>
+            </li>
+            <li>
+              <a target="_blank" href="#" class="text-decoration-none">
+							  <i class="fab fa-youtube-square fa-3x" id="social-network"></i>
+							</a>
+            </li>
+            <li>
+              <a target="_blank" href="#" class="text-decoration-none">
+							  <i class="fab fa-twitter-square fa-3x" id="social-network"></i>
+							</a>
+            </li>
+            <li>
+              <a target="_blank" href="#" class="text-decoration-none">
+							  <i class="fab fa-instagram-square fa-3x" id="social-network"></i>
+							</a>
+            </li>
+            <li>
+              <a target="_blank" href="#" class="text-decoration-none">
+							  <i class="fab fa-linkedin fa-3x" id="social-network"></i>
+							</a>
+						</li>							
+					</ul>
+				</div>
+
+			<div class="col-12 footer-text">
+				<p class=""></p>
+
+<!--
+<aside id="text-2" class="widget widget_text">			<div class="text-light text-left"><p><strong>Risk warning:</strong> Contracts for Difference (‘CFDs’) are a complex financial product, with speculative character, the trading of which involves significant risks of loss of capital. Trading of leveraged CFD products carries significant risk. Trading CFDs, which are a marginal product, may result in the loss of your entire balance. Remember that leverage in CFDs can work both to your advantage and disadvantage. CFDs traders do not own, or have any rights to, the underlying assets. Trading CFDs is not appropriate for all investors. Past performance does not constitute a reliable indicator of future results. Future forecasts do not constitute a reliable indicator of future performance. Before deciding to trade, you should carefully consider your investment objectives, level of experience and risk tolerance. You should not deposit more than you are prepared to lose. Please ensure you fully understand the risk associated with the product envisaged and seek independent advice, if necessary.</p>
+
+<p style="margin-top: 60px;">The eXcentral Brand is authorised and regulated across a variety of jurisdictions:</p>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6" style="margin-bottom: 15px;">SAVIRSKY HOLDINGS LIMITED is the holding company of OM BRIDGE (PTY) LTD and eXcentral International. eXcentral International is operated by OM BRIDGE (PTY) LTD (2016/479525/07), a South Africa investment firm, authorised and regulated by the Financial Sector Conduct Authority (FSCA) of South Africa with FSP License Number 48296. OM BRIDGE (PTY) LTD Address: Unit 6C3, 159 Rivonia Rd, Sinosteel Plaza, Morningside Ext 39, Sandton, Gauteng, 2146, South Africa. SPINELBRIDGE SERVICES LTD (HE 403254), the EU billing agent of OM BRIDGE PTY LTD, with a registered address Andrea Kariolou 38, Agios Athanasios, Ground Floor, 4102 Limassol, Cyprus.<br>
+Phone: +278 71 951005<br>
+Email: <a style="color: #7a6b46;" href="mailto:inquiries@excentral-int.com">inquiries@excentral-int.com</a></div>
+<div class="col-md-6" style="margin-bottom: 15px;">eXcentral Eu is a brand owned by Mount Nico Corp Ltd, a Cyprus Investment Firm, authorized and regulated by the Cyprus Securities and Exchange Commission with CIF license number 226/14. Mount Nico Corp Ltd’s registration number is HE307717. Is registered at Agiou Athanasiou, 66 Toumazis Linopetra Building 4102, Limassol, Cyprus.<br>
+Phone: +357 22 032220<br>
+Email: <a style="color: #7a6b46;" href="mailto:support@excentral-eu.com">support@excentral-eu.com</a></div>
+</div>
+</div>
+</div>
+		</aside>				</div>
+
+			</div>
+		</div>
+    </div>
+-->					
+    <a href="#">
+      <img src="assets/img/logo-light.png" alt="" class="img-fluid" style="max-width: 250px; max-height: 300px;">
+    </a>
+    <p class="text-light" style="padding-top: 1.8em;">Hybrid Investments © 2021. <br>All Rights Reserved.</p>
+  </footer>
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/amcharts-core.min.js"></script>
+    <script src="assets/js/amcharts.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+  
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+
+        window.onscroll = function() {FuncNav()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function FuncNav() {
+            if (window.pageYOffset >= sticky) {
+            navbar.classList.add("fixed-top")
+            } else {
+            navbar.classList.remove("fixed-top");
+            }
+        }
+
+        $('tbody, .market-news ul').mCustomScrollbar({
+        theme: 'minimal',
+        });
+
+        /*$(document).ready(function () {
+          $('li #social-network').hover(function () {
+            $(this).removeClass(');
+            $(this).addClass('text-primary');
+          }, function () {
+            $(this).removeClass('text-primary');
+            $(this).addClass(');
+          });
+        });*/
+
+        var btn = $('#return-to-top');
+
+        $(window).scroll(function() {
+          if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+          } else {
+            btn.removeClass('show');
+          }
+        });
+
+        btn.on('click', function(e) {
+          e.preventDefault();
+          $('html, body').animate({scrollTop:0}, '300');
+        });
+
+        
+    </script>
+</body>
+
+</html>

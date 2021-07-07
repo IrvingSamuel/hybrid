@@ -181,8 +181,8 @@ tbody tr:hover {
     }
     95% {
         opacity: 0.1;
-        left: -10.5px;
-        top: -10.5px;
+        left: -10.15px;
+        top: -10.15px;
         width: 28px;
         height: 28px;
     }
@@ -2069,4 +2069,100 @@ tbody.ob-heading {
     }
 }
 
-/*# sourceMappingURL=style.css.map */
+.bg-white {
+    background-color: #ffffff;
+    border-bottom: 1px solid lightgray;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#social-network {
+    padding: 0.3em;
+    color:whitesmoke;
+    text-decoration: none;
+    outline: none;
+    border: 0px none transparent;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -o-transition: 0.15s;
+    transition: 0.15s;
+}
+
+#social-network:hover{
+    color: lightgreen;
+}
+
+ul#social-networks li {
+    display:inline;
+}
+      
+#margin {
+    flex: 1;
+}
+  
+#return-to-top {
+    display: inline-block;
+    background-color: rgb(84, 84, 226);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #return-to-top::after {
+    font-family: 'Nunito', sans-serif;
+    content: "^";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #return-to-top:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  #return-to-top:active {
+    background-color: #555;
+  }
+  #return-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
